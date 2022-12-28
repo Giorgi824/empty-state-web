@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const input = document.getElementById("mm-valid-mail");
   const inputParent = document.querySelector(".mm-input");
   const form = document.querySelector(".mm-content form");
-  const btn = document.querySelector(".mm-valid-btn");
+  //   const btn = document.querySelector(".mm-valid-btn");
   const btnSpan = document.querySelector(".mm-valid-btn__txt");
   const parentClassNames = ["rejected", "completed", "focused", "blanked"];
   const removeParentsClasses = (element, names) => {
@@ -11,10 +11,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
   // btn texts
-  const btnSendText = btn.getAttribute("btnSend");
-  const btnClearText = btn.getAttribute("btnClear");
-  btnSpan.textContent = btnSendText;
-
+  //   const btnSendText = btn.getAttribute("btnSend");
+  //   const btnClearText = btn.getAttribute("btnClear");
+  //   btnSpan.textContent = btnSendText;
+  document.querySelector("[btnClear]").setAttribute("btnClear", "test");
   function defaultStyle() {
     if (btn.hasAttribute("disabled") || btn.classList.contains("rejected")) {
       input.value = "";
@@ -76,14 +76,17 @@ document.addEventListener("DOMContentLoaded", () => {
     e.preventDefault();
     ValidateEmail(input);
   });
+  function removeRejection() {
+    btnSpan.textContent = btnSendText;
+    btn.classList.remove("rejected");
+    inputParent.classList.remove("rejected");
+    inputParent.classList.remove("blanked");
+  }
   input.addEventListener("input", () => {
     const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     const val = input.value;
-    if (val.match(mailformat)) {
-      btnSpan.textContent = btnSendText;
-      btn.classList.remove("rejected");
-      inputParent.classList.remove("rejected");
-      inputParent.classList.remove("blanked");
+    if (val.match(mailformat) || val === "") {
+      removeRejection();
     }
   });
 });

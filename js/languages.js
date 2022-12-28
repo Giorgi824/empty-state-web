@@ -1,5 +1,6 @@
 const languages = {
   ge: {
+    cleaning: "გასუფთავება",
     title: "ვებ გვერდი მალე განახლდება",
     smallTitle: "გამოწერე სიახლეები",
     mailText:
@@ -21,6 +22,7 @@ const languages = {
     mapText: "როგორ მივიდე",
   },
   ru: {
+    cleaning: "очистить",
     title: "Сайт скоро будет обновлен",
     smallTitle: "Подписаться на новости",
     mailText:
@@ -43,6 +45,7 @@ const languages = {
     mapText: "Как я могу попасть",
   },
   en: {
+    cleaning: "clean up",
     title: "The website will be updated soon",
     smallTitle: "Subscribe to news",
     mailText:

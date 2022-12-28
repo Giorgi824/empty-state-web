@@ -1,8 +1,17 @@
 let chosenLanguage = localStorage.getItem("MM.language")
   ? localStorage.getItem("MM.language")
   : "ge";
+const btn = document.querySelector(".mm-valid-btn");
+let btnSendText = btn.getAttribute("btnSend");
+let btnClearText = btn.getAttribute("btnClear");
 const allLangITems = document.querySelectorAll("[data-text]");
 function renderLanguage(country) {
+  const inputBtn = document.querySelector(".mm-valid-btn");
+  inputBtn.setAttribute("btnSend", `${languages[country].sendBtnText}`);
+  inputBtn.setAttribute("btnClear", `${languages[country].cleaning}`);
+  btnSendText = btn.getAttribute("btnSend");
+  btnClearText = btn.getAttribute("btnClear");
+  //   console.log(languages[country].cleaning);
   allLangITems.forEach((item) => {
     const txtAttr = item.dataset.text;
     const textEl = languages[country][txtAttr];
