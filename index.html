@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MM</title>
+    <link rel="icon" href="img/favicon.ico" />
+    <link rel="stylesheet" href="styles/fonts.css" />
+    <script src="js/languages.js" defer></script>
+    <script src="js/change-language.js" defer></script>
+    <script src="js/svges.js" defer></script>
+    <script src="js/mode.js" defer></script>
+    <script src="js/lazy.js" defer></script>
+    <script src="js/add-svg.js" defer></script>
+    <script src="js/valid.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <link rel="stylesheet" href="styles/css/main.css" />
+  </head>
+  <body>
+    <header>
+      <div class="centered-element">
+        <a href="#" class="mm-logo" data-svg="logoSvg">My Profile</a>
+        <div class="mm-lang">
+          <div class="mm-lang__current">
+            <div class="mm-lang__symbol">
+              <span data-svg="symbolSvg" class="mm-lang__icon"></span>
+              <span class="mm-lang__lang">ქარ</span>
+            </div>
+            <span class="mm-lang__arrow" data-svg="arrowSvg"></span>
+          </div>
+          <div class="mm-lang__choose">
+            <a href="en"
+              ><img data-src="img/eng.svg" alt="eng flag" /> English
+              <span class="mark-icon"
+                ><img data-src="img/mark.svg" alt="" /></span
+            ></a>
+            <a href="ge" class="active"
+              ><img data-src="img/geo.svg" alt="geo flag" /> ქართული
+              <span class="mark-icon"
+                ><img data-src="img/mark.svg" alt="" /></span
+            ></a>
+            <a href="ru"
+              ><img data-src="img/rus.svg" alt="rus flag" /> Русский
+              <span class="mark-icon"
+                ><img data-src="img/mark.svg" alt="" /></span
+            ></a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="centered-element">
+        <div class="mm-content">
+          <h1 data-text="title">ვებ გვერდი მალე განახლდება</h1>
+          <div data-text="smallTitle">გამოწერე სიახლეები</div>
+          <p data-text="mailText">
+            დაგვიტოვეთ თქვენი საკონტაქტო ელ. ფოსტა და პირველმა მიიღეთ ინფორმაცია
+            სიახლეების შესახებ.
+          </p>
+          <form>
+            <div class="mm-input">
+              <input
+                id="mm-valid-mail"
+                type="text"
+                placeholder="ელ-ფოსტა"
+                autocomplete="off"
+                data-text="placeText"
+              />
+              <button
+                class="mm-valid-btn"
+                btnSend="გაგზავნა"
+                btnClear="გასუფთავება"
+                data-svg="markSvg"
+              >
+                <span class="mm-valid-btn__txt" data-text="sendBtnText"></span>
+              </button>
+            </div>
+            <div class="mm-input-text">
+              <span class="complete" data-text="completeText"
+                >თქვენ წარმატებით გამოწერეთ არხი. გთხოვთ, შეამოწმოთ თქვენი ელ.
+                ფოსტა</span
+              >
+              <span class="reject" data-text="rejectText"
+                >მითითებული ელ.ფოსტის ფორმატი არასწორია</span
+              >
+              <span class="blanked" data-text="blankedText"
+                >გთხოვთ მიუთითოთ ელ.ფოსტა</span
+              >
+            </div>
+          </form>
+        </div>
+        <span class="mm-rocket"><img src="" alt="rocket image" /></span>
+      </div>
+    </main>
+    <footer>
+      <div class="mm-top-footer">
+        <div class="centered-element">
+          <div class="mm-top-footer__item btns-mode">
+            <h2 data-text="appTitle">გადმოწერეთ ჩვენი აპლიკაცია</h2>
+            <p data-text="appText">
+              იყავი მუდამ კავშირზე და ისარგებლე უამრავი სერვისით ერთ სივრცეში!
+            </p>
+            <div class="mm-apps">
+              <a href="#" data-svg="appleSvg"></a>
+              <a href="#" data-svg="googleIconSvg"
+                ><span data-svg="googleSvg"></span
+              ></a>
+            </div>
+            <div class="dark-light-mode">
+              <div>
+                <button
+                  class="light"
+                  role="mode switch"
+                  arial-label="light mode"
+                  data-svg="sunSvg"
+                >
+                  <span data-text="lightMode">ღიაა</span>
+                </button>
+                <button
+                  class="dark"
+                  role="mode switch"
+                  arial-label="dark mode"
+                  data-svg="moonSvg"
+                >
+                  <span data-text="darkMode">მუქი</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="mm-top-footer__item footer-contacts">
+            <strong data-text="contactTitle">კონტაქტი</strong>
+            <span class="mm-address" data-text="contactAddress"
+              >საქართველო, თბილისი, 0131 აღმაშენებლის ხეივანი 172ბ</span
+            >
+            <a href="tel:+995322500555" data-text="contactTel"
+              >+(995 32 2-500555)</a
+            >
+            <a href="mailto:info@mp.ge" class="mm-mail" data-text="contactMail"
+              >info@mp.ge</a
+            >
+          </div>
+          <button data-svg="sendSvg" class="mm-blue-btn">
+            <span data-text="mapText">როგორ მივიდე</span>
+          </button>
+        </div>
+      </div>
+      <div class="mm-bottom-footer">
+        <div class="centered-element">
+          <p class="mm-copyright">© 2009-2022 LLC Money Movers</p>
+          <div class="mm-socials">
+            <a href="#" data-svg="facebookSvg"></a>
+            <a href="#" data-svg="instagramSvg"></a>
+            <a href="#" data-svg="tiktokSvg"></a>
+            <a href="#" data-svg="telegramSvg"></a>
+            <a href="#" data-svg="youtubeSvg"></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
