@@ -24,6 +24,16 @@ function renderLanguage(country) {
   });
 }
 renderLanguage(chosenLanguage);
+const chosenLangShort = document.querySelector(".mm-lang__lang");
+(function () {
+  const defaultLang = document.querySelector(
+    `.mm-lang__choose>a[href=${chosenLanguage}]`
+  );
+  defaultLang.classList.add("active");
+  const shortend = defaultLang.getAttribute("data-short");
+  chosenLangShort.textContent = shortend;
+})();
+
 document.addEventListener("DOMContentLoaded", () => {
   const langBtns = document.querySelectorAll(".mm-lang__choose>a");
   const langBox = document.querySelector(".mm-lang__choose");
@@ -38,6 +48,8 @@ document.addEventListener("DOMContentLoaded", () => {
       e.preventDefault();
       e.stopPropagation();
       const curr = e.currentTarget;
+      const currTxt = curr.getAttribute("data-short");
+      chosenLangShort.textContent = currTxt;
       const currHref = curr.getAttribute("href");
       langBox.classList.remove("active");
       langCurr.classList.remove("active");

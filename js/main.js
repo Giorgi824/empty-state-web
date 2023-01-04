@@ -5,17 +5,21 @@ document.addEventListener("DOMContentLoaded", () => {
   langCurrent.addEventListener("click", function (e) {
     e.preventDefault();
     e.stopPropagation();
-    e.currentTarget.classList.toggle("active");
+    const curr = e.currentTarget;
+    curr.classList.toggle("active");
     langChoose.classList.toggle("active");
   });
   ankers.forEach((item) => {
     item.addEventListener("click", function (e) {});
   });
-  // remove all active classes from DOM
-  // document.addEventListener("click", () => {
-  //   const allActive = document.querySelectorAll(".active");
-  //   allActive.forEach((item) => {
-  //     item.classList.remove("active");
-  //   });
-  // });
+  document.addEventListener("click", () => {
+    if (document.querySelector(".mm-lang__choose.active")) {
+      document
+        .querySelector(".mm-lang__choose.active")
+        .classList.remove("active");
+      document
+        .querySelector(".mm-lang__current.active")
+        .classList.remove("active");
+    }
+  });
 });

@@ -4,14 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MM</title>
+    <title>MP</title>
     <link rel="icon" href="img/favicon.ico" />
     <link rel="stylesheet" href="styles/fonts.css" />
     <script src="js/languages.js" defer></script>
     <script src="js/change-language.js" defer></script>
     <script src="js/svges.js" defer></script>
     <script src="js/mode.js" defer></script>
-    <script src="js/lazy.js" defer></script>
     <script src="js/add-svg.js" defer></script>
     <script src="js/valid.js" defer></script>
     <script src="js/main.js" defer></script>
@@ -20,30 +19,29 @@
   <body>
     <header>
       <div class="centered-element">
-        <a href="#" class="mm-logo" data-svg="logoSvg">My Profile</a>
+        <a href="#" class="mm-logo" data-svg="logoSvg">
+          <span>My Profile</span></a
+        >
         <div class="mm-lang">
           <div class="mm-lang__current">
             <div class="mm-lang__symbol">
               <span data-svg="symbolSvg" class="mm-lang__icon"></span>
-              <span class="mm-lang__lang">ქარ</span>
+              <span class="mm-lang__lang"></span>
             </div>
             <span class="mm-lang__arrow" data-svg="arrowSvg"></span>
           </div>
           <div class="mm-lang__choose">
-            <a href="en"
-              ><img data-src="img/eng.svg" alt="eng flag" /> English
-              <span class="mark-icon"
-                ><img data-src="img/mark.svg" alt="" /></span
+            <a href="en" data-short="ENG"
+              ><img src="img/eng.svg" alt="eng flag" /> English
+              <span class="mark-icon"><img src="img/mark.svg" alt="" /></span
             ></a>
-            <a href="ge"
-              ><img data-src="img/geo.svg" alt="geo flag" /> ქართული
-              <span class="mark-icon"
-                ><img data-src="img/mark.svg" alt="" /></span
+            <a href="ge" data-short="ქარ"
+              ><img src="img/geo.svg" alt="geo flag" /> ქართული
+              <span class="mark-icon"><img src="img/mark.svg" alt="" /></span
             ></a>
-            <a href="ru"
-              ><img data-src="img/rus.svg" alt="rus flag" /> Русский
-              <span class="mark-icon"
-                ><img data-src="img/mark.svg" alt="" /></span
+            <a href="ru" data-short="RUS"
+              ><img src="img/rus.svg" alt="rus flag" /> Русский
+              <span class="mark-icon"><img src="img/mark.svg" alt="" /></span
             ></a>
           </div>
         </div>
@@ -52,12 +50,9 @@
     <main>
       <div class="centered-element">
         <div class="mm-content">
-          <h1 data-text="title">ვებ გვერდი მალე განახლდება</h1>
-          <div data-text="smallTitle">გამოწერე სიახლეები</div>
-          <p data-text="mailText">
-            დაგვიტოვეთ თქვენი საკონტაქტო ელ. ფოსტა და პირველმა მიიღეთ ინფორმაცია
-            სიახლეების შესახებ.
-          </p>
+          <span data-text="title" class="title"></span>
+          <!-- <div data-text="smallTitle"></div> -->
+          <p data-text="mailText"></p>
           <form>
             <div class="mm-input">
               <input
@@ -73,20 +68,15 @@
                 btnClear="გასუფთავება"
                 data-svg="markSvg"
               >
+                <img class="green-line" src="img/line.svg" alt="" />
+                <img class="red-exit" src="img/remove.svg" alt="" />
                 <span class="mm-valid-btn__txt" data-text="sendBtnText"></span>
               </button>
             </div>
             <div class="mm-input-text">
-              <span class="complete" data-text="completeText"
-                >თქვენ წარმატებით გამოწერეთ არხი. გთხოვთ, შეამოწმოთ თქვენი ელ.
-                ფოსტა</span
-              >
-              <span class="reject" data-text="rejectText"
-                >მითითებული ელ.ფოსტის ფორმატი არასწორია</span
-              >
-              <span class="blanked" data-text="blankedText"
-                >გთხოვთ მიუთითოთ ელ.ფოსტა</span
-              >
+              <span class="complete" data-text="completeText"></span>
+              <span class="reject" data-text="rejectText"></span>
+              <span class="blanked" data-text="blankedText"></span>
             </div>
           </form>
         </div>
@@ -97,10 +87,8 @@
       <div class="mm-top-footer">
         <div class="centered-element">
           <div class="mm-top-footer__item btns-mode">
-            <h2 data-text="appTitle">გადმოწერეთ ჩვენი აპლიკაცია</h2>
-            <p data-text="appText">
-              იყავი მუდამ კავშირზე და ისარგებლე უამრავი სერვისით ერთ სივრცეში!
-            </p>
+            <div class="title" data-text="appTitle"></div>
+            <p data-text="appText"></p>
             <div class="mm-apps">
               <a href="#" data-svg="appleSvg"></a>
               <a href="#" data-svg="googleIconSvg"
@@ -109,51 +97,83 @@
             </div>
             <div class="dark-light-mode">
               <div>
-                <button
-                  class="light"
-                  role="mode switch"
-                  arial-label="light mode"
-                  data-svg="sunSvg"
-                >
-                  <span data-text="lightMode">ღიაა</span>
-                </button>
-                <button
-                  class="dark"
-                  role="mode switch"
-                  arial-label="dark mode"
-                  data-svg="moonSvg"
-                >
-                  <span data-text="darkMode">მუქი</span>
-                </button>
+                <div class="mm-btn-div mm-light">
+                  <button
+                    class="light"
+                    role="mode switch"
+                    arial-label="light mode"
+                    data-svg="sunSvg"
+                  >
+                    <span data-text="lightMode"></span>
+                  </button>
+                </div>
+                <div class="mm-btn-div mm-dark">
+                  <button
+                    class="dark"
+                    role="mode switch"
+                    arial-label="dark mode"
+                    data-svg="moonSvg"
+                  >
+                    <span data-text="darkMode"></span>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
           <div class="mm-top-footer__item footer-contacts">
-            <strong data-text="contactTitle">კონტაქტი</strong>
-            <span class="mm-address" data-text="contactAddress"
-              >საქართველო, თბილისი, 0131 აღმაშენებლის ხეივანი 172ბ</span
-            >
-            <a href="tel:+995322500555" data-text="contactTel"
-              >+(995 32 2-500555)</a
-            >
-            <a href="mailto:info@mp.ge" class="mm-mail" data-text="contactMail"
-              >info@mp.ge</a
-            >
+            <span data-text="contactTitle"></span>
+            <div class="mm-address-btn">
+              <span class="mm-address" data-text="contactAddress"></span>
+              <a
+                href="https://goo.gl/maps/KRo9q4jBLxuYC7wx8"
+                target="_blank"
+                data-svg="sendSvg"
+                class="mm-blue-btn"
+              >
+                <span data-text="mapText"></span>
+              </a>
+            </div>
+            <a href="tel:+995322500555" data-text="contactTel"></a>
+            <a
+              href="mailto:info@mp.ge"
+              class="mm-mail"
+              data-text="contactMail"
+            ></a>
           </div>
-          <button data-svg="sendSvg" class="mm-blue-btn">
+          <!-- <button data-svg="sendSvg" class="mm-blue-btn">
             <span data-text="mapText">როგორ მივიდე</span>
-          </button>
+          </button> -->
         </div>
       </div>
       <div class="mm-bottom-footer">
         <div class="centered-element">
           <p class="mm-copyright">© 2009-2022 LLC Money Movers</p>
           <div class="mm-socials">
-            <a href="#" data-svg="facebookSvg"></a>
-            <a href="#" data-svg="instagramSvg"></a>
-            <a href="#" data-svg="tiktokSvg"></a>
-            <a href="#" data-svg="telegramSvg"></a>
-            <a href="#" data-svg="youtubeSvg"></a>
+            <a
+              href="https://www.facebook.com/myprofile.ge"
+              target="_blank"
+              data-svg="facebookSvg"
+            ></a>
+            <a
+              href="https://www.instagram.com/mm_myprofile/"
+              target="_blank"
+              data-svg="instagramSvg"
+            ></a>
+            <a
+              href="https://www.tiktok.com/@MM_MyProfile"
+              target="_blank"
+              data-svg="tiktokSvg"
+            ></a>
+            <a
+              href="https://t.me/MM_MyProfile"
+              target="_blank"
+              data-svg="telegramSvg"
+            ></a>
+            <a
+              href="https://www.youtube.com/@MyProfilege"
+              target="_blank"
+              data-svg="youtubeSvg"
+            ></a>
           </div>
         </div>
       </div>

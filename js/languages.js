@@ -4,15 +4,16 @@ const languages = {
     title: "ვებ გვერდი მალე განახლდება",
     smallTitle: "გამოწერე სიახლეები",
     mailText:
-      "დაგვიტოვეთ თქვენი საკონტაქტო ელ-ფოსტა და პირველმა მიიღეთ ინფორმაცია სიახლეების შესახებ",
-    placeText: "ელ-ფოსტა",
+      "მართე ფინანსები, იყავი მუდამ კავშირზე და ისარგებლე უამრავი სერვისით ერთ სივრცეში!",
+    placeText: "ელ.ფოსტა",
     sendBtnText: "გაგზავნა",
     completeText:
-      "თქვენ წარმატებით გამოწერეთ არხი. გთხოვთ, შეამოწმოთ თქვენი ელ-ფოსტა",
+      "თქვენ წარმატებით გამოწერეთ არხი. გთხოვთ, შეამოწმოთ თქვენი ელ.ფოსტა",
     rejectText: "მითითებული ელ-ფოსტის ფორმატი არასწორია",
-    blankedText: "გთხოვთ მიუთითოთ ელ-ფოსტა",
+    blankedText: "გთხოვთ მიუთითოთ ელ.ფოსტა",
     appTitle: "გადმოწერეთ ჩვენი აპლიკაცია",
-    appText: "იყავი მუდამ კავშირზე და ისარგებლე უამრავი სერვისით ერთ სივრცეში!",
+    appText:
+      "იყავი მუდამ კავშირზე და ისარგებლე უამრავი სერვისით ერთ სივრცეში! <span>მალე</span>",
     lightMode: "ღია",
     darkMode: "მუქი",
     contactTitle: "კონტაქტი",
@@ -26,7 +27,7 @@ const languages = {
     title: "Сайт скоро будет обновлен",
     smallTitle: "Подписаться на новости",
     mailText:
-      "Оставьте нам свой контактный e-mail и получайте информацию о новостях первыми",
+      "Управляйте своими финансами, оставайтесь на связи и пользуйтесь множеством услуг в одном месте!",
     placeText: "электронная почта",
     sendBtnText: "Отправить",
     completeText:
@@ -35,11 +36,11 @@ const languages = {
     blankedText: "Пожалуйста, введите свой адрес электронной почты",
     appTitle: "Загрузите наше приложение",
     appText:
-      "Оставайтесь на связи и наслаждайтесь множеством услуг в одном пространстве!",
+      "Оставайтесь на связи и наслаждайтесь множеством услуг в одном пространстве! <span>Cкоро</span>",
     lightMode: "светлый",
-    darkMode: "темнота",
+    darkMode: "темный",
     contactTitle: "Контакт",
-    contactAddress: "Грузия, Тбилиси, 0131 переулок Д. Агмашенебели 172б",
+    contactAddress: "Грузия, Тбилиси, 0131 аллея Д. Агмашенебели 172г",
     contactTel: "+995 32 2 500-555",
     contactMail: "info@mp.ge",
     mapText: "Как я могу попасть",
@@ -49,7 +50,7 @@ const languages = {
     title: "The website will be updated soon",
     smallTitle: "Subscribe to news",
     mailText:
-      "Leave us your contact email. Mail and be the first to receive information about news",
+      "Manage your finances, stay connected and enjoy many services in one place!",
     placeText: "e-mail",
     sendBtnText: "send",
     completeText:
@@ -57,11 +58,12 @@ const languages = {
     rejectText: "The specified email format is invalid",
     blankedText: "Please enter your e-mail address",
     appTitle: "Download our app",
-    appText: "Stay connected and enjoy many services in one space!",
+    appText:
+      "Stay connected and enjoy many services in one space! <span style='margin-left:0px;'>Soon</span>",
     lightMode: "Light",
     darkMode: "Dark",
     contactTitle: "Contact",
-    contactAddress: "Georgia, Tbilisi, 0131 D. Agmashenebeli alley 172b",
+    contactAddress: "Georgia, Tbilisi, 0131 D. Agmashenebeli alley 172G",
     contactTel: "+995 32 2 500-555",
     contactMail: "info@mp.ge",
     mapText: "How I get there",

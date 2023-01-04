@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const input = document.getElementById("mm-valid-mail");
   const inputParent = document.querySelector(".mm-input");
   const form = document.querySelector(".mm-content form");
-  //   const btn = document.querySelector(".mm-valid-btn");
   const btnSpan = document.querySelector(".mm-valid-btn__txt");
   const parentClassNames = ["rejected", "completed", "focused", "blanked"];
   const removeParentsClasses = (element, names) => {
@@ -10,10 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
       element.classList.remove(`${item}`);
     });
   };
-  // btn texts
-  //   const btnSendText = btn.getAttribute("btnSend");
-  //   const btnClearText = btn.getAttribute("btnClear");
-  //   btnSpan.textContent = btnSendText;
   document.querySelector("[btnClear]").setAttribute("btnClear", "test");
   function defaultStyle() {
     if (btn.hasAttribute("disabled") || btn.classList.contains("rejected")) {
@@ -63,18 +58,18 @@ document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("click", function (e) {
     if (inputParent.classList.contains("blanked"))
       inputParent.classList.remove("blanked");
-    // when button is გასუფთავება
     if (e.target.closest(".mm-valid-btn.rejected")) {
       defaultStyle();
       setTimeout(() => {
         inputParent.classList.remove("blanked");
-      }, 1);
+      }, 0);
     }
   });
 
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     ValidateEmail(input);
+    inputParent.classList.contains("completed") ? input.blur() : null;
   });
   function removeRejection() {
     btnSpan.textContent = btnSendText;
